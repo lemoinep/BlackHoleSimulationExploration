@@ -17,8 +17,7 @@ friction_coeff = 0.01
 
 # Initialize particle positions in two groups: near and far
 np.random.seed(0)
-
-n_near = int(n_particles * 0.7)
+n_near = int(n_particles * 0.8)
 n_far = n_particles - n_near
 
 radii_near = np.random.uniform(5, 10, n_near)
@@ -42,7 +41,7 @@ vel = np.vstack((vx, vy, vz))
 
 # Starfield initialization (distant stars)
 n_stars = 500
-star_radii = np.random.uniform(100, 150, n_stars)  # Large radius for distant stars
+star_radii = np.random.uniform(100, 150, n_stars)
 star_theta = np.arccos(np.random.uniform(-1, 1, n_stars))
 star_phi = np.random.uniform(0, 2 * np.pi, n_stars)
 
@@ -61,18 +60,22 @@ def draw_sphere(radius, slices=30, stacks=30, color=(1, 0, 0, 0.3)):
     gluDeleteQuadric(quad)
     glPopMatrix()
 
-def draw_particles(positions):
+def draw_particles(positions, velocities):
     glPointSize(3)
     glBegin(GL_POINTS)
-    glColor3f(0, 0, 1)
-    for p in positions.T:
+    for p, v in zip(positions.T, velocities.T):
+        speed = np.linalg.norm(v)
+        t = min(speed / 2.0, 1.0)  # normalize speed
+        r = t
+        b = 1 - t
+        glColor3f(r, 0, b)
         glVertex3f(*p)
     glEnd()
 
 def draw_stars(positions):
     glPointSize(1)
     glBegin(GL_POINTS)
-    glColor3f(1, 1, 1)  # White stars
+    glColor3f(1, 1, 1)
     for p in positions.T:
         glVertex3f(*p)
     glEnd()
@@ -85,22 +88,36 @@ def init_opengl(width, height):
     glClearColor(0, 0, 0, 1)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    gluPerspective(45, (width / height), 0.1, 1000.0)  # Large far clipping plane for stars
+    gluPerspective(45, (width / height), 0.1, 1000.0)
     glMatrixMode(GL_MODELVIEW)
+
+    # Lighting setup
+    glEnable(GL_LIGHTING)
+    glEnable(GL_LIGHT0)
+    light_pos = [10.0, 10.0, 10.0, 1.0]
+    light_ambient = [0.2, 0.2, 0.2, 1.0]
+    light_diffuse = [0.7, 0.7, 0.7, 1.0]
+    light_specular = [1.0, 1.0, 1.0, 1.0]
+    glLightfv(GL_LIGHT0, GL_POSITION, light_pos)
+    glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient)
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse)
+    glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular)
+    glEnable(GL_COLOR_MATERIAL)
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE)
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, [1,1,1,1])
+    glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, 50)
 
 def main():
     pygame.init()
     display = (800, 600)
 
-    # Request multisampling buffers before creating window
+    # Enable multisampling for antialiasing
     pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLEBUFFERS, 1)
-    pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLESAMPLES, 4)  # 4x MSAA
+    pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLESAMPLES, 4)
 
     pygame.display.set_mode(display, DOUBLEBUF | OPENGL)
-
     init_opengl(*display)
 
-    # Enable multisampling in OpenGL
     glEnable(GL_MULTISAMPLE)
 
     cam_distance = 40
@@ -176,10 +193,20 @@ def main():
         # Draw starfield first (background)
         draw_stars(stars_pos)
 
-        # Draw event horizon and particles
-        draw_sphere(Rs)
-        draw_particles(pos)
+        # Draw glow sphere for black hole (additive blending)
+        glEnable(GL_BLEND)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE)
+        glColor4f(1, 0, 0, 0.1)
+        draw_sphere(Rs * 1.3)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 
+        # Draw event horizon sphere with lighting
+        draw_sphere(Rs, color=(1, 0, 0, 0.6))
+
+        # Draw particles colored by speed
+        draw_particles(pos, vel)
+
+        # Overlay text info
         elapsed_time = frame * dt
         info_text = f"Mass: {mass:.3f} | Particles: {pos.shape[1]} | Time: {elapsed_time:.2f}"
         text_surface = font.render(info_text, True, (255, 255, 255))
