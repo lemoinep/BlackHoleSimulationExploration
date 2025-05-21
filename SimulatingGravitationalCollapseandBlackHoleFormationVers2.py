@@ -17,7 +17,7 @@ friction_coeff = 0.01
 
 # Initialize particle positions in two groups: near and far
 np.random.seed(0)
-n_near = int(n_particles * 0.8)
+n_near = int(n_particles * 0.6)
 n_far = n_particles - n_near
 
 radii_near = np.random.uniform(5, 10, n_near)
@@ -95,7 +95,7 @@ def init_opengl(width, height):
     glEnable(GL_LIGHTING)
     glEnable(GL_LIGHT0)
     light_pos = [10.0, 10.0, 10.0, 1.0]
-    light_ambient = [0.2, 0.2, 0.2, 1.0]
+    light_ambient = [0.5, 0.5, 0.5, 1.0]
     light_diffuse = [0.7, 0.7, 0.7, 1.0]
     light_specular = [1.0, 1.0, 1.0, 1.0]
     glLightfv(GL_LIGHT0, GL_POSITION, light_pos)
@@ -120,8 +120,8 @@ def main():
 
     glEnable(GL_MULTISAMPLE)
 
-    cam_distance = 40
-    rot_x, rot_y = 0, 0
+    cam_distance = 60
+    rot_x, rot_y = 40, 0
     mouse_down = False
 
     global pos, vel, mass
