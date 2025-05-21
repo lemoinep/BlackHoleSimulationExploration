@@ -20,14 +20,26 @@ c = 1.0  # Speed of light (set to 1 in our units) - important for Schwarzschild 
 M_initial = 1.0  # Initial mass of the black hole seed - the black hole starts with a nonzero mass to initiate attraction.
 
 # Simulation parameters
-n_particles = 1500  # Number of particles simulating matter - more particles means more realistic but more computationally expensive.
+#n_particles = 1500  # Number of particles simulating matter - more particles means more realistic but more computationally expensive.
 dt = 0.05  # Time step between simulation frames - affects simulation speed and numerical stability.
 n_steps = 600  # Total number of simulation steps.
 friction_coeff = 0.01  # Friction coefficient (energy dissipation) - simulates energy loss allowing matter to spiral inward.
 
 # Initialize random particle positions inside a spherical shell
 np.random.seed(0)  # Seed random number generator for reproducibility.
-radii = np.random.uniform(5, 10, n_particles)  # Random radii between 5 and 10 units.
+#radii = np.random.uniform(5, 20, n_particles)  # Random radii between 5 and 10 units.
+
+n_particles_1 = 500
+n_particles_2 = 500
+n_particles_3 = 1000
+
+radii_far_1 =  np.random.uniform(5, 10, n_particles_1)
+radii_far_2 =  np.random.uniform(15, 20, n_particles_2)
+radii_far_3 =  np.random.uniform(30, 40, n_particles_3)
+
+n_particles = n_particles_1+n_particles_2+n_particles_3 # Number of particles simulating matter - more particles means more realistic but more computationally expensive.
+radii = np.concatenate([radii_far_1,radii_far_2,radii_far_3])
+
 theta = np.arccos(np.random.uniform(-1, 1, n_particles))  # Polar angles (theta), uniform distribution on sphere.
 phi = np.random.uniform(0, 2 * np.pi, n_particles)  # Azimuthal angles (phi), uniform between 0 and 2pi.
 
@@ -67,9 +79,10 @@ def plot_horizon(ax, mass):
 horizon = plot_horizon(ax, mass)  # Initial event horizon plot
 
 # Set axis limits and labels
-ax.set_xlim(-15, 15)
-ax.set_ylim(-15, 15)
-ax.set_zlim(-15, 15)
+lim1 = 30
+ax.set_xlim(-lim1, lim1)
+ax.set_ylim(-lim1, lim1)
+ax.set_zlim(-lim1, lim1)
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
@@ -132,9 +145,10 @@ def update(frame):
     time_text.set_text(f"Elapsed time: {elapsed_time:.2f} units")
 
     # Keep axis limits fixed for consistent view
-    ax.set_xlim(-15, 15)
-    ax.set_ylim(-15, 15)
-    ax.set_zlim(-15, 15)
+    lim1 = 30
+    ax.set_xlim(-lim1, lim1)
+    ax.set_ylim(-lim1, lim1)
+    ax.set_zlim(-lim1, lim1)
 
     # Return updated artists for animation
     return scat, horizon, title, time_text
