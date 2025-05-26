@@ -1,11 +1,10 @@
-My objective is to explore various concepts in physics by formulating problems mathematically and conducting simulations. 
+My objective is to explore various concepts in physics by formulating problems mathematically and conducting simulations.  
 This approach will yield many interesting and valuable insights.
-
 
 ## Detailed Explanations of the Code and Scientific Concepts  
 
 ### Why This Simulation?  
-The primary goal is to provide a simplified yet instructive visualization of gravitational collapse and black hole formation. 
+The primary goal is to provide a simplified yet instructive visualization of gravitational collapse and black hole formation.  
 While not capturing the full complexity of general relativity, it offers an accessible representation of fundamental principles:  
 
 - **Gravitational Collapse**: Understand how matter concentration contracts under its own gravity, becoming increasingly dense.  
@@ -13,25 +12,40 @@ While not capturing the full complexity of general relativity, it offers an acce
 - **Event Horizon**: Visualize the boundary (event horizon) beyond which nothing can return.  
 - **Accretion**: Approximately simulate how black holes attract and absorb surrounding matter.  
 
-
 ---
 
 ### Key Concepts and Equations  
 
 #### **Universal Gravitation (Newton)**  
 - The simulation uses Newton's law to calculate gravitational forces between particles and the central mass (representing the forming black hole).  
-- **Equation**: $$ F = \frac{G \cdot m_1 \cdot m_2}{r^2} $$, where $$ F $$ = force, $$ G $$ = gravitational constant, $$ m_1, m_2 $$ = masses, $$ r $$ = distance.  
-- **In code**: Gravitational acceleration is calculated as `a_grav = -G * mass * pos / r_safe**3`, where `mass` is the central mass and `pos` is the particle's position vector.  
+- **Equation**:  
+  $$
+  F = \frac{G \cdot m_1 \cdot m_2}{r^2}
+  $$  
+  where $F$ = force, $G$ = gravitational constant, $m_1, m_2$ = masses, $r$ = distance.  
+- **In code**: Gravitational acceleration is calculated as  
+  `a_grav = -G * mass * pos / r_safe**3`,  
+  where `mass` is the central mass and `pos` is the particle's position vector.  
 
 #### **Orbital Velocity**  
 - Particles receive realistic initial orbital motion.  
-- **Equation**: $$ v = \sqrt{\frac{G \cdot M}{r}} $$, where $$ v $$ = orbital velocity, $$ M $$ = central mass, $$ r $$ = orbital radius.  
-- **In code**: `v_circ = np.sqrt(G * mass / radii)` computes this velocity for each particle.  
+- **Equation**:  
+  $$
+  v = \sqrt{\frac{G \cdot M}{r}}
+  $$  
+  where $v$ = orbital velocity, $M$ = central mass, $r$ = orbital radius.  
+- **In code**:  
+  `v_circ = np.sqrt(G * mass / radii)` computes this velocity for each particle.  
 
 #### **Schwarzschild Radius (Event Horizon)**  
 - Defines the event horizon's size, beyond which nothing escapes.  
-- **Equation**: $$ R_s = \frac{2 \cdot G \cdot M}{c^2} $$, where $$ R_s $$ = Schwarzschild radius, $$ c $$ = speed of light.  
-- **In code**: `Rs = 2 * G * mass / c**2` calculates this radius, and a sphere of this size represents the event horizon.  
+- **Equation**:  
+  $$
+  R_s = \frac{2 \cdot G \cdot M}{c^2}
+  $$  
+  where $R_s$ = Schwarzschild radius, $c$ = speed of light.  
+- **In code**:  
+  `Rs = 2 * G * mass / c**2` calculates this radius, and a sphere of this size represents the event horizon.  
 
 #### **Accretion**  
 - Simplified model where particles within the event horizon are "absorbed," increasing the black hole's mass.  
@@ -63,4 +77,3 @@ At each simulation step (per animation frame):
 - **Artificial Friction**: Introduced to force particles toward the center, not fully realistic.  
 - **Arbitrary Units**: No direct correspondence to real-world physical units.  
 
----
