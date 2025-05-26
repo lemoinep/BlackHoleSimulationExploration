@@ -8,7 +8,7 @@ from matplotlib.patches import Patch
 # --- Physical constants and simulation parameters ---
 G = 1.0       # Gravitational constant (Newtonian approximation)
 c = 1.0       # Speed of light (unit system)
-dt = 0.05     # Time step for numerical integration
+dt = 0.5     # Time step for numerical integration
 n_steps = 600 # Total number of simulation frames
 friction_coeff = 0.01  # Artificial friction to mimic energy dissipation (e.g., gravitational wave emission)
 
@@ -17,12 +17,13 @@ friction_coeff = 0.01  # Artificial friction to mimic energy dissipation (e.g., 
 np.random.seed(0)  # Seed for reproducibility
 
 # Distribute particles in three spherical shells at different radial distances
-n_particles_1, n_particles_2, n_particles_3 = 500, 500, 1000
+n_particles_1, n_particles_2, n_particles_3, n_particles_4 = 500, 500, 1000,1000
 radii_far_1 = np.random.uniform(5, 10, n_particles_1)
 radii_far_2 = np.random.uniform(15, 20, n_particles_2)
 radii_far_3 = np.random.uniform(30, 40, n_particles_3)
-n_particles = n_particles_1 + n_particles_2 + n_particles_3
-radii = np.concatenate([radii_far_1, radii_far_2, radii_far_3])
+radii_far_4 = np.random.uniform(70, 100, n_particles_4)
+n_particles = n_particles_1 + n_particles_2 + n_particles_3 + n_particles_4
+radii = np.concatenate([radii_far_1, radii_far_2, radii_far_3, radii_far_4])
 
 # Uniform angular distribution on sphere (theta: polar angle, phi: azimuthal angle)
 theta = np.arccos(np.random.uniform(-1, 1, n_particles))
@@ -44,10 +45,10 @@ vel = np.vstack((vx, vy, vz))  # Shape: (3, n_particles)
 
 # --- Initialize two black holes ---
 # Each black hole is modeled as a point mass with position, velocity, and mass
-mass1, mass2 = 1.0, 1.0  # Initial black hole masses
+mass1, mass2 = 1.0, 1.5  # Initial black hole masses
 
-pos_bh1 = np.array([-10.0, 0.0, 0.0])  # Initial position BH1 (left side)
-pos_bh2 = np.array([10.0, 0.0, 0.0])   # Initial position BH2 (right side)
+pos_bh1 = np.array([-20.0, 0.0, 10.0])  # Initial position BH1 (left side)
+pos_bh2 = np.array([30.0, 0.0, 0.0])   # Initial position BH2 (right side)
 
 vel_bh1 = np.array([0.0, 0.15, 0.0])   # Initial velocity BH1 (upward)
 vel_bh2 = np.array([0.0, -0.15, 0.0])  # Initial velocity BH2 (downward)

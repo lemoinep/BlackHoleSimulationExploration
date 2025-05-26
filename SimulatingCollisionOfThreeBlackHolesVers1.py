@@ -15,9 +15,15 @@ friction_coeff = 0.01  # Artificial friction to mimic energy dissipation
 # --- Initialize matter particles ---
 np.random.seed(0)
 n_particles_1, n_particles_2, n_particles_3 = 500, 500, 1000
-radii_far_1 = np.random.uniform(5, 10, n_particles_1)
-radii_far_2 = np.random.uniform(15, 20, n_particles_2)
-radii_far_3 = np.random.uniform(30, 40, n_particles_3)
+#radii_far_1 = np.random.uniform(5, 15, n_particles_1)
+#radii_far_2 = np.random.uniform(15, 20, n_particles_2)
+#radii_far_3 = np.random.uniform(30, 60, n_particles_3)
+
+radii_far_1 = np.random.uniform(20, 25, n_particles_1)
+radii_far_2 = np.random.uniform(30, 40, n_particles_2)
+radii_far_3 = np.random.uniform(40, 60, n_particles_3)
+
+
 n_particles = n_particles_1 + n_particles_2 + n_particles_3
 radii = np.concatenate([radii_far_1, radii_far_2, radii_far_3])
 theta = np.arccos(np.random.uniform(-1, 1, n_particles))
