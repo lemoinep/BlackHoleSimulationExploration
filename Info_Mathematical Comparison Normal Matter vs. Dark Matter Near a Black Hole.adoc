@@ -1,0 +1,104 @@
+= Mathematical Comparison: Normal Matter vs. Dark Matter Near a Black Hole
+
+== Black Hole Metric Reminder
+
+The geometry of spacetime around a Schwarzschild black hole (non-rotating, uncharged) is given by:
+
+[latexmath]
+++++
+ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right)c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 (d\theta^2 + \sin^2\theta\, d\phi^2)
+++++
+
+where:
+- [latexmath]++G++ = gravitational constant
+- [latexmath]++M++ = black hole mass
+- [latexmath]++c++ = speed of light
+- [latexmath]++r++ = radial distance from the black hole center
+
+The Schwarzschild radius (event horizon):
+
+[latexmath]
+++++
+r_s = \frac{2GM}{c^2}
+++++
+
+== Normal Matter Near a Black Hole
+
+*Normal (baryonic) matter* follows the geodesics of this metric:
+- Outside ([latexmath]++r > r_s++), particles and light can orbit or fall into the black hole.
+- Inside ([latexmath]++r < r_s++), all trajectories inevitably lead to the singularity.
+
+For a photon (normal matter, massless), the geodesic condition is:
+
+[latexmath]
+++++
+ds^2 = 0
+++++
+
+In radial coordinates ([latexmath]++d\theta = d\phi = 0++), this gives:
+
+[latexmath]
+++++
+0 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2
+++++
+
+== Dark Matter Near a Black Hole
+
+Dark matter, though its nature is unknown, is generally modeled as a massive particle or collisionless fluid, interacting only gravitationally.
+- It also follows the geodesics of the Schwarzschild metric, but does not emit or absorb electromagnetic radiation.
+
+The equation of motion for a massive particle (normal or dark matter):
+
+[latexmath]
+++++
+ds^2 = -c^2 d\tau^2
+++++
+
+where [latexmath]++d\tau++ is the particle's proper time.
+
+Thus, the gravitational behavior of dark matter and normal matter is identical near a black hole, since both follow the same Schwarzschild metric.
+
+== Bimetric Models and Alternatives
+
+Some advanced cosmological models (bimetric) propose that dark matter could evolve on a different "sheet" of spacetime, with a different metric:
+
+- For normal matter:
++
+[latexmath]
+++++
+ds_{(1)}^2 = g_{\mu\nu} dx^\mu dx^\nu
+++++
+
+- For dark matter (hypothetical):
++
+[latexmath]
+++++
+ds_{(2)}^2 = \tilde{g}_{\mu\nu} dx^\mu dx^\nu
+++++
+
+In such models, dark matter could have a different speed limit ([latexmath]++\tilde{c}++), but no observation has confirmed this to date.
+
+== Summary Table
+
+[cols="1,2,2,3",options="header"]
+|===
+|Type of Matter |Geodesic Equation |Main Interaction |Behavior Near Black Hole
+
+|Normal matter
+|[latexmath]++ds^2 = -c^2 d\tau^2++
+|Gravity, electromagnetic
+|Falls to singularity, possible radiation
+
+|Dark matter
+|[latexmath]++ds^2 = -c^2 d\tau^2++
+|Gravity only
+|Falls to singularity, no radiation
+|===
+
+In standard models, normal and dark matter are indistinguishable gravitationally near a black hole, as both follow the same equations of general relativity. Alternative models propose a different metric for dark matter, but this remains speculative.
+
+== Sources
+
+* Carroll, S. M. _Spacetime and Geometry: An Introduction to General Relativity_
+* Bertone, G. _Particle Dark Matter: Observations, Models and Searches_
+* https://arxiv.org/abs/1407.5583
