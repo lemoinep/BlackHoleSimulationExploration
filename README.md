@@ -77,3 +77,29 @@ At each simulation step (per animation frame):
 - **Artificial Friction**: Introduced to force particles toward the center, not fully realistic.  
 - **Arbitrary Units**: No direct correspondence to real-world physical units.  
 
+
+
+---
+
+### Project descriptions 
+
+This project simulates the visual and physical effects of a non-spinning (Schwarzschild) black hole on light and background images by numerically solving photon geodesic equations. The programs distort input images to represent how a black hole bends light, enabling visualization of gravitational lensing and event horizon effects. Users can generate animations, explore different black hole parameters, and save simulation data for further analysis. This toolkit serves as an educational and research resource for understanding black hole optics and general relativity phenomena through computational simulation.
+
+Detailed Python Program Descriptions
+
+- SimulatingCollisionOfThreeBlackHolesVers1.py : This script simulates the complex gravitational interactions and eventual collision of three black holes. It numerically solves the equations of motion under general relativity approximations to track trajectories, gravitational wave emission, and merger outcomes. This simulation helps explore chaotic dynamics in multi-black-hole systems.
+
+- SimulatingCollisionOfTwoBlackHolesVers1.py: Focused on the merger of two black holes, this program models their inspiral, collision, and ringdown phases. It calculates gravitational wave signatures and final black hole parameters, providing insights into binary black hole dynamics relevant for astrophysical observations.
+
+- SimulatingGravitationalCollapseandBlackHoleFormation.py: Simulates the gravitational collapse of a massive star’s core leading to black hole formation. The code models the evolution of matter density, spacetime curvature, and horizon formation, illustrating the physical process behind black hole birth.
+
+- SimulatingGravitationalCollapseandBlackHoleFormationVers2.py: An enhanced version of the gravitational collapse simulation incorporating improved numerical stability, additional physical effects such as pressure or rotation, or refined boundary conditions to increase realism and accuracy.
+
+- SimulatingGravitationalCollapseandBlackHoleFormationVers3.py: This iteration further refines the collapse simulation by integrating more sophisticated physics models, extended parameter controls, or enhanced data output for detailed post-processing and visualization.
+
+
+
+
+
+
+
