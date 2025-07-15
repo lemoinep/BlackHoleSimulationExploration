@@ -101,7 +101,7 @@ Detailed Python Program Descriptions
 
 ---
 
-# What Happens to Ordinary Matter Near a Black Hole?
+# What Happens to Ordinary Matter Near a Black Hole ?
 
 Near a black hole, ordinary matter undergoes extreme compression and intense forces, causing its temperature to rise significantly. This matter is drawn into a spiral at very high speeds, forming an accretion disk that orbits the black hole, sometimes close to the speed of light, especially if the black hole is rotating. During these rapid movements and particle collisions within the disk, an immense amount of energy is released, producing highly energetic radiation and accelerated particles. Part of this energy can escape into the universe as radiation.
 
@@ -109,7 +109,7 @@ Once matter crosses the event horizon, it can no longer escape. According to gen
 
 In summary, ordinary matter is first compressed and heated as it falls toward the black hole. It often forms an accretion disk, heated by gravitational forces and internal collisions, generating significant energy emission. After crossing the event horizon, matter is irreversibly drawn toward the singularity and disappears from the outside universe’s view. No identifiable ordinary matter remains outside the black hole after crossing the horizon, although the black hole may slowly emit weak energy in the form of Hawking radiation, a very subtle quantum phenomenon.
 
-# What Happens to Dark Matter Near a Black Hole?
+# What Happens to Dark Matter Near a Black Hole ?
 
 Dark matter exhibits more complex behavior near black holes due to gravitational interactions and its still hypothetical properties. Recent research has highlighted several possible mechanisms. During galactic collisions, supermassive black holes may pass through regions with high concentrations of dark matter, creating so-called density "spikes." These zones may stabilize structures around black holes through self-interactions of dark matter particles. Unlike ordinary matter, dark matter is not directly absorbed by the black hole but influences its dynamic environment through gravity.
 
