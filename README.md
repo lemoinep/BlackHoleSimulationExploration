@@ -20,9 +20,9 @@ While not capturing the full complexity of general relativity, it offers an acce
 - The simulation uses Newton's law to calculate gravitational forces between particles and the central mass (representing the forming black hole).  
 - **Equation**:  
 
-  $$
-  F = \frac{G \cdot m_1 \cdot m_2}{r^2}
-  $$  
+$$
+F = \frac{G \cdot m_1 \cdot m_2}{r^2}
+$$  
   
   where $F$ = force, $G$ = gravitational constant, $m_1, m_2$ = masses, $r$ = distance.  
 - **In code**: Gravitational acceleration is calculated as  
@@ -33,9 +33,9 @@ While not capturing the full complexity of general relativity, it offers an acce
 - Particles receive realistic initial orbital motion.  
 - **Equation**:  
 
-  $$
-  v = \sqrt{\frac{G \cdot M}{r}}
-  $$  
+$$
+v = \sqrt{\frac{G \cdot M}{r}}
+$$  
   
   where $v$ = orbital velocity, $M$ = central mass, $r$ = orbital radius.  
 - **In code**:  
@@ -45,9 +45,9 @@ While not capturing the full complexity of general relativity, it offers an acce
 - Defines the event horizon's size, beyond which nothing escapes.  
 - **Equation**:  
 
-  $$
-  R_s = \frac{2 \cdot G \cdot M}{c^2}
-  $$  
+$$
+R_s = \frac{2 \cdot G \cdot M}{c^2}
+$$  
   
   where $R_s$ = Schwarzschild radius, $c$ = speed of light.  
 - **In code**:  
@@ -330,6 +330,7 @@ is the Stefan-Boltzmann constant,
 $$ 
 \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) 
 $$ 
+
 is the area of the event horizon. 
 
 ### Mass Loss Rate
