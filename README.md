@@ -19,9 +19,11 @@ While not capturing the full complexity of general relativity, it offers an acce
 #### **Universal Gravitation (Newton)**  
 - The simulation uses Newton's law to calculate gravitational forces between particles and the central mass (representing the forming black hole).  
 - **Equation**:  
+
   $$
   F = \frac{G \cdot m_1 \cdot m_2}{r^2}
   $$  
+  
   where $F$ = force, $G$ = gravitational constant, $m_1, m_2$ = masses, $r$ = distance.  
 - **In code**: Gravitational acceleration is calculated as  
   `a_grav = -G * mass * pos / r_safe**3`,  
@@ -30,9 +32,11 @@ While not capturing the full complexity of general relativity, it offers an acce
 #### **Orbital Velocity**  
 - Particles receive realistic initial orbital motion.  
 - **Equation**:  
+
   $$
   v = \sqrt{\frac{G \cdot M}{r}}
   $$  
+  
   where $v$ = orbital velocity, $M$ = central mass, $r$ = orbital radius.  
 - **In code**:  
   `v_circ = np.sqrt(G * mass / radii)` computes this velocity for each particle.  
@@ -40,9 +44,11 @@ While not capturing the full complexity of general relativity, it offers an acce
 #### **Schwarzschild Radius (Event Horizon)**  
 - Defines the event horizon's size, beyond which nothing escapes.  
 - **Equation**:  
+
   $$
   R_s = \frac{2 \cdot G \cdot M}{c^2}
   $$  
+  
   where $R_s$ = Schwarzschild radius, $c$ = speed of light.  
 - **In code**:  
   `Rs = 2 * G * mass / c**2` calculates this radius, and a sphere of this size represents the event horizon.  
@@ -320,11 +326,13 @@ where
 ### Mass Loss Rate
 
 Relating energy and mass loss \( E = M c^2 \):  
+
 $$
 \frac{d(M c^2)}{dt} = - 4 \pi \left(\frac{2GM}{c^2}\right)^2 \sigma \left(\frac{\hbar c^{3}}{8 \pi k_B G M}\right)^4
 $$
 
 Simplifying, the rate of mass loss obeys approximately:  
+
 $$
 \frac{dM}{dt} = - \frac{\hbar c^4}{G^2} \frac{1}{M^{2}} \times \text{(constant factors)}
 $$
