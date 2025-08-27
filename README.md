@@ -291,10 +291,11 @@ To conserve total energy, the particle falling into the black hole must carry an
 ## Key Equations of Black Hole Evaporation
 
 ### Hawking Temperature
-The temperature \( T \) of a Schwarzschild black hole due to Hawking radiation is:
-\[
+
+The temperature \( T \) of a Schwarzschild black hole due to Hawking radiation is:  
+$$
 k_B T = \frac{\hbar c^3}{8 \pi G M}
-\]
+$$
 where  
 - \(k_B\) is Boltzmann's constant,  
 - \(\hbar\) is the reduced Planck constant,  
@@ -303,29 +304,32 @@ where
 - \(M\) is the black hole mass.
 
 ### Power Emitted (Energy Loss Rate)
-Using a Stefan-Boltzmann-like expression, the power emitted is:
-\[
+
+Using a Stefan-Boltzmann-like expression, the power emitted is:  
+$$
 \frac{dE}{dt} = - \sigma A T^4
-\]
+$$
 where   
 - \(\sigma\) is the Stefan-Boltzmann constant,  
 - \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) is the area of the event horizon.
 
 ### Mass Loss Rate
-Relating energy and mass loss \( E = M c^2 \):
-\[
+
+Relating energy and mass loss \( E = M c^2 \):  
+$$
 \frac{d(M c^2)}{dt} = - 4 \pi \left(\frac{2GM}{c^2}\right)^2 \sigma \left(\frac{\hbar c^{3}}{8 \pi k_B G M}\right)^4
-\]
-Simplifying, the rate of mass loss obeys approximately:
-\[
+$$
+Simplifying, the rate of mass loss obeys approximately:  
+$$
 \frac{dM}{dt} = - \frac{\hbar c^4}{G^2} \frac{1}{M^{2}} \times \text{(constant factors)}
-\]
+$$
 
 ### Evaporation Time
+
 The evaporation time for a black hole of initial mass \( M \) is proportional to its mass cubed:
-\[
+$$
 t_{\text{evap}} \propto M^3
-\]
+$$
 
 ---
 
