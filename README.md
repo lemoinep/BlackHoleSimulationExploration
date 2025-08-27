@@ -173,81 +173,6 @@ where the total potential $$\Phi_{\text{tot}}$$ includes the classical gravitati
 
 A black hole’s gravitational attraction acts equally on both ordinary and dark matter, since it depends only on mass. However, the nature of their interactions differs significantly. Ordinary matter is subject, in addition to gravity, to electromagnetic, weak, and strong forces, enabling atoms, stars, and energy dissipation via radiation, which facilitates efficient accretion onto black holes. Dark matter interacts primarily through gravity, and possibly very weakly via the weak force, making it invisible and insensitive to electromagnetic interactions. Consequently, while ordinary matter can form a compact, luminous accretion disk, dark matter typically falls “silently” into the black hole without emitting detectable radiation.
 
-# Black Hole Evaporation and End of Life
-
-Black holes evaporate via a quantum mechanism called Hawking radiation, gradually emitting particles and losing mass. For massive black holes, this effect is extremely slow. As the black hole loses mass, its temperature rises, accelerating evaporation. This intensifies dramatically when the mass becomes very small, ending with the black hole disappearing in a final explosive release of residual energy. This process can last extraordinarily long, far exceeding the current age of the universe, especially for stellar-mass black holes.
-
-# Black Hole Evaporation by Hawking Radiation
-
-The physical demonstration of black hole evaporation by Hawking radiation is based on a combination of quantum mechanics and general relativity, resulting in a phenomenon where a black hole gradually emits particles, loses mass, and eventually evaporates.
-
-## Physical Origin of Hawking Radiation
-
-Hawking radiation arises from quantum fluctuations in the vacuum near the event horizon of the black hole. In the quantum vacuum, particle-antiparticle pairs are constantly created and annihilated. Near the horizon, one of the particles can fall into the black hole while the other escapes. The escaping particle becomes observable radiation known as Hawking radiation. This process leads to a net loss of energy (and thus mass) from the black hole because the energy carried away by the escaping particle is subtracted from the black hole.
-
-## Detailed Mechanism and Negative Energy
-
-To conserve total energy, the particle falling into the black hole must carry an effective negative energy relative to the outside. This reduces the total mass of the black hole. Thus, the black hole gradually loses mass by emitting this radiation. The temperature of the black hole is inversely proportional to its mass: the more mass the black hole loses, the higher its temperature becomes, which accelerates particle emission and hence evaporation.
-
----
-
-## Key Equations of Black Hole Evaporation
-
-### Hawking Temperature
-The temperature \( T \) of a Schwarzschild black hole due to Hawking radiation is:
-\[
-k_B T = \frac{\hbar c^3}{8 \pi G M}
-\]
-where  
-- \(k_B\) is Boltzmann's constant,  
-- \(\hbar\) is the reduced Planck constant,  
-- \(c\) is the speed of light,  
-- \(G\) is the gravitational constant,  
-- \(M\) is the black hole mass.
-
-### Power Emitted (Energy Loss Rate)
-Using a Stefan-Boltzmann-like expression, the power emitted is:
-\[
-\frac{dE}{dt} = - \sigma A T^4
-\]
-where   
-- \(\sigma\) is the Stefan-Boltzmann constant,  
-- \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) is the area of the event horizon.
-
-### Mass Loss Rate
-Relating energy and mass loss \( E = M c^2 \):
-\[
-\frac{d(M c^2)}{dt} = - 4 \pi \left(\frac{2GM}{c^2}\right)^2 \sigma \left(\frac{\hbar c^{3}}{8 \pi k_B G M}\right)^4
-\]
-Simplifying, the rate of mass loss obeys approximately:
-\[
-\frac{dM}{dt} = - \frac{\hbar c^4}{G^2} \frac{1}{M^{2}} \times \text{(constant factors)}
-\]
-
-### Evaporation Time
-The evaporation time for a black hole of initial mass \( M \) is proportional to its mass cubed:
-\[
-t_{\text{evap}} \propto M^3
-\]
-
----
-
-## Final Explosive Phase
-
-The accelerated mass loss leads to a final explosive phase when the black hole becomes very small and hot, releasing a burst of energy. This occurs approximately when the mass reaches:
-\[
-M \sim 10^{9} \text{ tons} \approx 10^{12} \text{ kg}
-\]
-At this scale, the evaporation time is shorter than the age of the universe. The temperature skyrockets, allowing emission of more massive particles, speeding up evaporation explosively.
-
-This final explosion is linked to the inverse proportionality of temperature to mass: as the black hole shrinks, it becomes hotter, greatly accelerating Hawking radiation emission until a violent release of energy occurs.
-
----
-
-
-# Particles Emitted by a Black Hole at End of Life
-
-During most of its existence, a black hole mainly emits light or massless particles such as photons, possibly gravitons, and neutrinos. At the end of its life, when its temperature becomes very high, it can also emit massive particles — electrons, positrons, muons, quarks, and potentially other elementary particles whose mass is less than the available thermal energy. This explosive emission marks the final phase of evaporation.
 
 # Distinct Behavior of Dark Matter and Ordinary Matter Near a Black Hole
 
@@ -341,6 +266,81 @@ These equations enable precise modeling of dark matter gravitational dynamics ne
 
 
 
+# Black Hole Evaporation and End of Life
+
+Black holes evaporate via a quantum mechanism called Hawking radiation, gradually emitting particles and losing mass. For massive black holes, this effect is extremely slow. As the black hole loses mass, its temperature rises, accelerating evaporation. This intensifies dramatically when the mass becomes very small, ending with the black hole disappearing in a final explosive release of residual energy. This process can last extraordinarily long, far exceeding the current age of the universe, especially for stellar-mass black holes.
+
+# Black Hole Evaporation by Hawking Radiation
+
+The physical demonstration of black hole evaporation by Hawking radiation is based on a combination of quantum mechanics and general relativity, resulting in a phenomenon where a black hole gradually emits particles, loses mass, and eventually evaporates.
+
+## Physical Origin of Hawking Radiation
+
+Hawking radiation arises from quantum fluctuations in the vacuum near the event horizon of the black hole. In the quantum vacuum, particle-antiparticle pairs are constantly created and annihilated. Near the horizon, one of the particles can fall into the black hole while the other escapes. The escaping particle becomes observable radiation known as Hawking radiation. This process leads to a net loss of energy (and thus mass) from the black hole because the energy carried away by the escaping particle is subtracted from the black hole.
+
+## Detailed Mechanism and Negative Energy
+
+To conserve total energy, the particle falling into the black hole must carry an effective negative energy relative to the outside. This reduces the total mass of the black hole. Thus, the black hole gradually loses mass by emitting this radiation. The temperature of the black hole is inversely proportional to its mass: the more mass the black hole loses, the higher its temperature becomes, which accelerates particle emission and hence evaporation.
+
+---
+
+## Key Equations of Black Hole Evaporation
+
+### Hawking Temperature
+The temperature \( T \) of a Schwarzschild black hole due to Hawking radiation is:
+\[
+k_B T = \frac{\hbar c^3}{8 \pi G M}
+\]
+where  
+- \(k_B\) is Boltzmann's constant,  
+- \(\hbar\) is the reduced Planck constant,  
+- \(c\) is the speed of light,  
+- \(G\) is the gravitational constant,  
+- \(M\) is the black hole mass.
+
+### Power Emitted (Energy Loss Rate)
+Using a Stefan-Boltzmann-like expression, the power emitted is:
+\[
+\frac{dE}{dt} = - \sigma A T^4
+\]
+where   
+- \(\sigma\) is the Stefan-Boltzmann constant,  
+- \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) is the area of the event horizon.
+
+### Mass Loss Rate
+Relating energy and mass loss \( E = M c^2 \):
+\[
+\frac{d(M c^2)}{dt} = - 4 \pi \left(\frac{2GM}{c^2}\right)^2 \sigma \left(\frac{\hbar c^{3}}{8 \pi k_B G M}\right)^4
+\]
+Simplifying, the rate of mass loss obeys approximately:
+\[
+\frac{dM}{dt} = - \frac{\hbar c^4}{G^2} \frac{1}{M^{2}} \times \text{(constant factors)}
+\]
+
+### Evaporation Time
+The evaporation time for a black hole of initial mass \( M \) is proportional to its mass cubed:
+\[
+t_{\text{evap}} \propto M^3
+\]
+
+---
+
+## Final Explosive Phase
+
+The accelerated mass loss leads to a final explosive phase when the black hole becomes very small and hot, releasing a burst of energy. This occurs approximately when the mass reaches:
+\[
+M \sim 10^{9} \text{ tons} \approx 10^{12} \text{ kg}
+\]
+At this scale, the evaporation time is shorter than the age of the universe. The temperature skyrockets, allowing emission of more massive particles, speeding up evaporation explosively.
+
+This final explosion is linked to the inverse proportionality of temperature to mass: as the black hole shrinks, it becomes hotter, greatly accelerating Hawking radiation emission until a violent release of energy occurs.
+
+---
+
+
+# Particles Emitted by a Black Hole at End of Life
+
+During most of its existence, a black hole mainly emits light or massless particles such as photons, possibly gravitons, and neutrinos. At the end of its life, when its temperature becomes very high, it can also emit massive particles — electrons, positrons, muons, quarks, and potentially other elementary particles whose mass is less than the available thermal energy. This explosive emission marks the final phase of evaporation.
 
 
 
