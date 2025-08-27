@@ -293,9 +293,11 @@ To conserve total energy, the particle falling into the black hole must carry an
 ### Hawking Temperature
 
 The temperature \( T \) of a Schwarzschild black hole due to Hawking radiation is:  
+
 $$
-k_B T = \frac{\hbar c^3}{8 \pi G M}
+\k_B T = \frac{\hbar c^3}{8 \pi G M}
 $$
+
 where  
 - \(k_B\) is Boltzmann's constant,  
 - \(\hbar\) is the reduced Planck constant,  
