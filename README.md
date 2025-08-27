@@ -320,8 +320,9 @@ $$
 $$
 
 where   
-- \(\sigma\) is the Stefan-Boltzmann constant,  
-- \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) is the area of the event horizon.
+- \(\sigma\) is the Stefan-Boltzmann constant, 
+ 
+- $$ \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) is the area of the event horizon. $$
 
 ### Mass Loss Rate
 
@@ -351,7 +352,11 @@ $$
 
 The accelerated mass loss leads to a final explosive phase when the black hole becomes very small and hot, releasing a burst of energy. This occurs approximately when the mass reaches:
 \[
+
+$$
 M \sim 10^{9} \text{ tons} \approx 10^{12} \text{ kg}
+$$
+
 \]
 At this scale, the evaporation time is shorter than the age of the universe. The temperature skyrockets, allowing emission of more massive particles, speeding up evaporation explosively.
 
