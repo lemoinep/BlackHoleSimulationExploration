@@ -270,6 +270,10 @@ These equations enable precise modeling of dark matter gravitational dynamics ne
 
 Black holes evaporate via a quantum mechanism called Hawking radiation, gradually emitting particles and losing mass. For massive black holes, this effect is extremely slow. As the black hole loses mass, its temperature rises, accelerating evaporation. This intensifies dramatically when the mass becomes very small, ending with the black hole disappearing in a final explosive release of residual energy. This process can last extraordinarily long, far exceeding the current age of the universe, especially for stellar-mass black holes.
 
+# Particles Emitted by a Black Hole at End of Life
+
+During most of its existence, a black hole mainly emits light or massless particles such as photons, possibly gravitons, and neutrinos. At the end of its life, when its temperature becomes very high, it can also emit massive particles — electrons, positrons, muons, quarks, and potentially other elementary particles whose mass is less than the available thermal energy. This explosive emission marks the final phase of evaporation.
+
 # Black Hole Evaporation by Hawking Radiation
 
 The physical demonstration of black hole evaporation by Hawking radiation is based on a combination of quantum mechanics and general relativity, resulting in a phenomenon where a black hole gradually emits particles, loses mass, and eventually evaporates.
@@ -336,11 +340,6 @@ At this scale, the evaporation time is shorter than the age of the universe. The
 This final explosion is linked to the inverse proportionality of temperature to mass: as the black hole shrinks, it becomes hotter, greatly accelerating Hawking radiation emission until a violent release of energy occurs.
 
 ---
-
-
-# Particles Emitted by a Black Hole at End of Life
-
-During most of its existence, a black hole mainly emits light or massless particles such as photons, possibly gravitons, and neutrinos. At the end of its life, when its temperature becomes very high, it can also emit massive particles — electrons, positrons, muons, quarks, and potentially other elementary particles whose mass is less than the available thermal energy. This explosive emission marks the final phase of evaporation.
 
 
 
