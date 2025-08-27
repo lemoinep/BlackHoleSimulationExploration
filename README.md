@@ -320,9 +320,9 @@ $$
 $$
 
 where   
-- \(\sigma\) is the Stefan-Boltzmann constant, 
+- $$ \(\sigma\) $$ is the Stefan-Boltzmann constant, 
  
-- $$ \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) is the area of the event horizon. $$
+- $$ \(A = 4 \pi r_s^2 = 16 \pi \left(\frac{G M}{c^2}\right)^2\) $$ is the area of the event horizon. 
 
 ### Mass Loss Rate
 
