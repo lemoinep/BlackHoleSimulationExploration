@@ -1,6 +1,8 @@
 # **Black Hole Simulation**
 
-<img src="Images/P0001.jpg" width="75%" />
+<p align="center">
+<img src="Images/P0001.jpg" width="100%" />
+</p>
 
 My objective is to explore various concepts in physics by formulating problems mathematically and conducting simulations. This approach will yield many interesting and valuable insights.
 
@@ -15,6 +17,10 @@ The primary goal is to provide a simplified yet instructive visualization of gra
 - **Accretion**: Approximately simulate how black holes attract and absorb surrounding matter.  
 
 ---
+
+<p align="center">
+<img src="Images/P0002.jpg" width="75%" />
+</p>
 
 ### Key Concepts and Equations  
 
@@ -376,4 +382,19 @@ This final explosion is linked to the inverse proportionality of temperature to 
 ---
 
 
+
+## For more information
+
+<img src="Images/Z20260110_000001.jpg" width="100%" />
+<img src="Images/Z20260110_000002.jpg" width="100%" />
+<img src="Images/Z20260110_000003.jpg" width="100%" />
+<img src="Images/Z20260110_000004.jpg" width="100%" />
+<img src="Images/Z20260110_000005.jpg" width="100%" />
+<img src="Images/Z20260110_000006.jpg" width="100%" />
+<img src="Images/Z20260110_000007.jpg" width="100%" />
+<img src="Images/Z20260110_000008.jpg" width="100%" />
+<img src="Images/Z20260110_000009.jpg" width="100%" />
+<img src="Images/Z20260110_000010.jpg" width="100%" />
+<img src="Images/Z20260110_000011.jpg" width="100%" />
+<img src="Images/Z20260110_000012.jpg" width="100%" />
 
